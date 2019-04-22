@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+  mariadb:
+    build:
+      context: ./mariadb
+    ports:
+     - 3306:3306
+
+  solr:
+    build:
+      context: ./solr
+    ports:
+     - 8983:8983
+    command: solr-create -c vivocore -d /opt/vivocore
+
+  vivo:
+    build:
+      context: ./vivo
+    volumes:
+     - ./io:/io
+     - ./config:/usr/local/vivo/home/config
+    ports:
+     - 8080:8080
+    # command: bash -c 'tail -f /dev/null'
+
+networks:
+  default:
+    name: linked-data
