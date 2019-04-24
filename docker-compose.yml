@@ -14,4 +14,3 @@ services:
     image: solr-test
     ports:
      - 8983:8983
-    command: solr-create -c vivocore -d /opt/vivocore
