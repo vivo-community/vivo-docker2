@@ -9,7 +9,7 @@ services:
       - 3306:3306
 
   solr:
-    build: 
+    build:
       context: ./solr
     ports:
       - 8983:8983
