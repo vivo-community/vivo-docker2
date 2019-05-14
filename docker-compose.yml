@@ -1,16 +1,31 @@
 version: '3'
 services:
-  db:
+  mariadb:
     build:
       context: ./mariadb
-    image: mariadb-test
+    volumes:
+      - maria-data:/var/lib/mysql
     ports:
-     - 3306:3306
-    container_name: vitrodb
+      - 3306:3306
 
-  index:
-    build: 
+  solr:
+    build:
       context: ./solr
-    image: solr-test
     ports:
-     - 8983:8983
+      - 8983:8983
+    volumes:
+      - solr-data:/opt/solr/server/solr/ckan/data
+    command: solr-create -c vivocore -d /opt/vivocore
+
+  vivo:
+    build:
+      context: ./vivo
+    volumes:
+      - ./example-config:/usr/local/vivo/home/config
+    ports:
+      - 8080:8080
+
+
+volumes:
+  solr-data:
+  maria-data:
