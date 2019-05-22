@@ -26,7 +26,9 @@
     :hasSearchIndexer             :basicSearchIndexer ;
     :hasImageProcessor            :iioImageProcessor ;
     :hasFileStorage               :ptiFileStorage ;
-    :hasContentTripleSource       :sdbContentTripleSource ;
+#    :hasContentTripleSource       :sdbContentTripleSource ;
+#    :hasContentTripleSource       :tdbContentTripleSource ;
+    :hasContentTripleSource       :sparqlContentTripleSource ;
     :hasConfigurationTripleSource :tdbConfigurationTripleSource ;
     :hasTBoxReasonerModule        :jfactTBoxReasonerModule .
 
@@ -93,19 +95,19 @@
     a   vitroWebapp:triplesource.impl.sdb.ContentTripleSourceSDB ,
         vitroWebapp:modules.tripleSource.ContentTripleSource .
 
-#:tdbContentTripleSource
-#    a   vitroWebapp:triplesource.impl.tdb.ContentTripleSourceTDB ,
-#        vitroWebapp:modules.tripleSource.ContentTripleSource ;
-#    # May be an absolute path, or relative to the Vitro home directory.
-#    :hasTdbDirectory "tdbContentModels" .
+:tdbContentTripleSource
+    a   vitroWebapp:triplesource.impl.tdb.ContentTripleSourceTDB ,
+        vitroWebapp:modules.tripleSource.ContentTripleSource ;
+    # May be an absolute path, or relative to the Vitro home directory.
+    :hasTdbDirectory "tdbContentModels" .
 
-#:sparqlContentTripleSource
-#    a   vitroWebapp:triplesource.impl.sparql.ContentTripleSourceSPARQL ,
-#        vitroWebapp:modules.tripleSource.ContentTripleSource ;
-#    # The URI of the SPARQL endpoint for your triple-store.
-#    :hasEndpointURI "PUT_YOUR_SPARQL_ENDPOINT_URI_HERE" ;
-#    # The URI to use for SPARQL UPDATE calls against your triple-store. 
-#    :hasUpdateEndpointURI "PUT_THE UPDATE_URI_HERE" .
+:sparqlContentTripleSource
+    a   vitroWebapp:triplesource.impl.sparql.ContentTripleSourceSPARQL ,
+        vitroWebapp:modules.tripleSource.ContentTripleSource ;
+    # The URI of the SPARQL endpoint for your triple-store.
+    :hasEndpointURI "http://blazegraph:9999/blazegraph/sparql" ;
+    # The URI to use for SPARQL UPDATE calls against your triple-store. 
+    :hasUpdateEndpointURI "http://blazegraph:9999/blazegraph/sparql" .
 
 #:virtuosoContentTripleSource
 #    a   vitroWebapp:triplesource.impl.virtuoso.ContentTripleSourceVirtuoso ,

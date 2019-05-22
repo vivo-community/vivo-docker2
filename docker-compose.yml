@@ -1,13 +1,15 @@
 version: '3'
 services:
-  mariadb:
-    build:
-      context: ./mariadb
+  blazegraph:
+    image: nawer/blazegraph
+    environment:
+        JAVA_XMS: 512m
+        JAVA_XMX: 1g
     volumes:
-      - maria-data:/var/lib/mysql
+            - /var/blazegraph:/var/lib/blazegraph
+            - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     ports:
-      - 3306:3306
-
+      - 8889:9999
   solr:
     build:
       context: ./solr
@@ -25,7 +27,5 @@ services:
     ports:
       - 8080:8080
 
-
 volumes:
   solr-data:
-  maria-data:
