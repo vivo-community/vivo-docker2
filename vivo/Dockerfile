@@ -31,8 +31,8 @@ RUN rm -r /usr/local/tomcat/webapps/examples
 
 # Set properties
 # Adjust logging, you can mount over this in docker-compose to further adjust
-COPY ./log4j.properties /usr/local/tomcat/webapps/vivo/WEB-INF/classes
-WORKDIR /usr/local/vivo/home/config
+COPY ./log4j.properties /usr/local/tomcat/webapps/VIVO/WEB-INF/classes
+WORKDIR /usr/local/VIVO/home/config
 COPY ./dockercompose.runtime.properties runtime.properties
 COPY ./example.applicationSetup.n3 applicationSetup.n3
 
