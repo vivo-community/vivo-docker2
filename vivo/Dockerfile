@@ -18,8 +18,8 @@ RUN apt-get install -y maven git
 #     tar -xzf vivo.tar.gz && rm vivo.tar.gz
 
 WORKDIR /usr/local/
-RUN git clone https://github.com/vivo-project/Vitro.git Vitro -b develop
-RUN git clone https://github.com/vivo-project/VIVO.git VIVO -b develop
+RUN git clone https://github.com/vivo-project/Vitro.git Vitro -b rel-1.11.0-RC
+RUN git clone https://github.com/vivo-project/VIVO.git VIVO -b rel-1.11.0-RC
 WORKDIR /usr/local/VIVO/
 RUN mvn install -s installer/example-settings.xml
 
