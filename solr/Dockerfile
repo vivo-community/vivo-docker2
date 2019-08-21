@@ -1,4 +1,4 @@
-FROM solr:7.7.1
+FROM solr:latest
 
 COPY ./vivocore /opt/vivocore
 
