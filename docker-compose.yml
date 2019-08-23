@@ -22,6 +22,7 @@ services:
       context: ./vivo
     volumes:
       - ./example-config:/usr/local/vivo/home/config
+      - tdb-model-data:/usr/local/vivo/home/tdbModels
 
   proxy:
     build:
@@ -41,3 +42,4 @@ services:
 volumes:
   solr-data:
   maria-data:
+  tdb-model-data:

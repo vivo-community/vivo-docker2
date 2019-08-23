@@ -1,7 +1,5 @@
 const CASAuthentication = require('cas-authentication');
 
-const AGENT_DOMAIN = process.env.CAS_AGENT_DOMAIN;
-
 let cas = new CASAuthentication({
   cas_url     : process.env.CAS_URL,
   service_url : process.env.APP_URL
@@ -20,7 +18,7 @@ function init(app, proxy) {
 
       let username = '';
       if( cas.session_name && req.session[cas.session_name] ) {
-        username = req.session[cas.session_name]+'@'+AGENT_DOMAIN;
+        username = req.session[cas.session_name];
       }
 
       if( username ) {
