@@ -1,0 +1,55 @@
+{
+  "spring": {
+    "data": {
+      "solr": {
+        "host": "http://solr-discovery:8983/solr"
+      }
+    }
+  },
+  "ui": {
+    "url": "http://localhost:4200"
+  },
+  "vivo": {
+    "base-url": "https://localhost:3000/vivo"
+  },
+  "graphql": {
+    "spqr": {
+      "gui": {
+        "enabled": true
+      }
+    }
+  },
+  "middleware": {
+    "allowed-origins": [
+      "http://localhost:9000",
+      "http://localhost:4200",
+      "http://localhost:3000"
+    ],
+    "index": {
+      "onStartup": false
+    },
+    "export": {
+      "individualBaseUri": "http://localhost:3000/display"
+    }
+  },
+  "mail" : {
+    "host" : "smtp.gmail.com",
+    "username" : "",
+    "password" : "",
+    "properties" : {
+      "mail" : {
+        "transport" : {
+          "protocol" : "smtp"
+        },
+        "smtp" : {
+          "port" : 587,
+          "auth" : true,
+          "starttls" : {
+            "enable" : true,
+            "required" : true
+          }
+        }
+      }
+    }
+  }
+}
