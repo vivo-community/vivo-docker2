@@ -23,7 +23,7 @@ Regardless of the usage, you will need to build the images, which require the fo
 
 ## VIVO Runtime Example
 
-The example [docker-compose.yml](docker-compose.yml) is a typical installation for trying out a simple VIVO installation in docker. This file starts three containers and uses the standard SDB system with the mariadb backend.  This example also shows how a local directory [example-config](example-config) is used to overwrite the default `runtime.properties` as installed by the Dockerfile.  Here the root password, and the domain are modified.
+The example [docker-compose.yml](docker-compose.yml) is a typical installation for trying out a simple VIVO installation in docker. This file starts three containers and uses the standard SDB system with the mariadb backend.  This example also shows how a local directory [example-config](example-config) is used to overwrite the default `runtime.properties` and `applicationSetup.n3` as installed by the Dockerfile.  Here the root password, and the domain are modified.
 
 ```bash
 docker-compose up -d
