@@ -1,0 +1,46 @@
+{
+  "title": "VIVO Linked Data Fragments server",
+  
+  "datasourcetypes": {   
+    "SparqlDatasource"   : "org.linkeddatafragments.datasource.sparql.SparqlDataSourceType"
+  },
+  
+  "datasources": {
+    "vivo": {
+      "title": "VIVO Linked Data TPF",
+      "type": "SparqlDatasource",
+      "description": "VIVO Semantic TPF server",
+      "settings": { "endpoint": "http://vivo:8080/vivo/api/sparqlQuery",
+                    "username": "vivo_root@mydomain.edu",
+                    "password": "monkey" }
+    }
+  },
+  
+  "prefixes": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "void": "http://rdfs.org/ns/void#",
+    "bibo": "http://purl.org/ontology/bibo/",
+    "c4o": "http://purl.org/spar/c4o/",
+    "cito": "http://purl.org/spar/cito/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "event": "http://purl.org/NET/c4dm/event.owl#",
+    "fabio": "http://purl.org/spar/fabio/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://aims.fao.org/aos/geopolitical.owl#",
+    "obo": "http://purl.obolibrary.org/obo/",
+    "ocrer": "http://purl.org/net/OCRe/research.owl#",
+    "ocresst": "http://purl.org/net/OCRe/statistics.owl#",
+    "ocresd": "http://purl.org/net/OCRe/study_design.owl#",
+    "ocresp": "http://purl.org/net/OCRe/study_protocol.owl#",
+    "ro": "http://purl.obolibrary.org/obo/ro.owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "swo": "http://www.ebi.ac.uk/efo/swo/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "vitro-public": "http://vitro.mannlib.cornell.edu/ns/vitro/public#",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "scires": "http://vivoweb.org/ontology/scientific-research#",
+    "vann": "http://purl.org/vocab/vann/"
+  }
+}

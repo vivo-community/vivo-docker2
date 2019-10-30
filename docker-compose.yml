@@ -31,6 +31,13 @@ services:
     ports:
       - 8080:8080
 
+  tpf:
+    build:
+      context: ./tpf
+    volumes:
+      - ./tpf/config:/usr/local/tpf/config
+    ports:
+      - 7070:8080
 
 volumes:
   solr-data:
