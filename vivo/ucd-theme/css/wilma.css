@@ -616,8 +616,8 @@ ul#main-nav {
 }
 /* INTRO-BLURB ------>  */
 #intro {
-    float: left;
-    width: 570px;
+    flex: 1;
+    /* width: 570px; */
     padding-bottom: 50px;
 }
 body.loggedIn #intro {
@@ -648,7 +648,8 @@ ul.individual-urls-people li a {
 }
 /* LOG IN------>  */
 #login {
-    float: right;
+    /* float: right; */
+    align-self: start;
     width: 314px;
     border: 1px solid #e8ece9;
     margin-right: 25px;
@@ -658,7 +659,7 @@ ul.individual-urls-people li a {
     margin-top: 20px;
 }
 body.login #login {
-    float: none;
+    /* float: none; */
 }
 #login h2 {
     font-size: 22px;
@@ -952,10 +953,16 @@ a.view-all-style {
 		color: #fff;
 		opacity: .5;
 }
+.home-cols {
+    display: flex;
+}
+.home-cols > * {
+    flex: 1;
+}
 #home-research  {
 	width: 297px;
-	float: left;
-	clear: both;
+	/* float: left; */
+	/* clear: both; */
 }
 #home-research ul {
 	padding: 0.7em 0 0.6em 0.75em;
@@ -980,9 +987,9 @@ a.view-all-style {
 	text-align: center;
 }
 #home-academic-depts  {
-	width: 297px;
+	/* width: 297px; */
 	margin-left: 15px;
-	float: left;
+	/* float: left; */
 }
 #home-academic-depts h4,
 #home-faculty-mbrs h4,
@@ -1002,9 +1009,9 @@ a.view-all-style {
 	font-size: 0.9em;
 }
 #home-faculty-mbrs  {
-	width: 297px;
-	margin: 0 0 20px 15px;
-	float: left;
+	/* width: 297px; */
+	margin: 0 0 0 15px;
+	/* float: left; */
 }
 div#tempSpacing {
     margin-top:30px;

@@ -32,52 +32,57 @@
         <#include "menu.ftl">
 
         <section>
-            <p class="disclaimer">Prototype disclaimer goes here in the form of a sentence using works and such.  Only
-            needs to appear on the front page since Prototype is used in site title.</p>
+            <p class="disclaimer">The development of this registry <b>prototype</b> has been spurred on by the COVID-19 
+            epidemic. We are constantly reviewing and updating the registry, and some content may be lost in the 
+            process. We appreciate your patience as we continue building and improving this site. </p>
         </section>
 
-        <section id="intro" role="region">
-            <h2>${i18n().intro_title}</h2>
+        <div style="display: flex">
+            <section id="intro" role="region">
+                <h2>${i18n().intro_title}</h2>
 
-            <p>${i18n().intro_para1}</p>
-            <p>${i18n().intro_para2}</p>
+                <p>${i18n().intro_para1}</p>
+                <p>${i18n().intro_para2}</p>
 
-            <section id="search-home" role="region">
-                <h3>${i18n().intro_searchvivo} <span class="search-filter-selected">filteredSearch</span></h3>
+                <section id="search-home" role="region">
+                    <h3>${i18n().intro_searchvivo} <span class="search-filter-selected">filteredSearch</span></h3>
 
-                <fieldset>
-                    <legend>${i18n().search_form}</legend>
-                    <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" >
-                        <div id="search-home-field">
-                            <input type="text" name="querytext" class="search-homepage" value="" autocapitalize="off" />
-                            <input type="submit" value="${i18n().search_button}" class="search" />
-                            <input type="hidden" name="classgroup"  value="" autocapitalize="off" />
-                        </div>
+                    <fieldset>
+                        <legend>${i18n().search_form}</legend>
+                        <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" >
+                            <div id="search-home-field">
+                                <input type="text" name="querytext" class="search-homepage" value="" autocapitalize="off" />
+                                <input type="submit" value="${i18n().search_button}" class="search" />
+                                <input type="hidden" name="classgroup"  value="" autocapitalize="off" />
+                            </div>
 
-                        <a class="filter-search filter-default" href="#" title="${i18n().intro_filtersearch}">
-                            <span class="displace">${i18n().intro_filtersearch}</span>
-                        </a>
+                            <a class="filter-search filter-default" href="#" title="${i18n().intro_filtersearch}">
+                                <span class="displace">${i18n().intro_filtersearch}</span>
+                            </a>
 
-                        <ul id="filter-search-nav">
-                            <li><a class="active" href="">${i18n().all_capitalized}</a></li>
-                            <@lh.allClassGroupNames vClassGroups! />
-                        </ul>
-                    </form>
-                </fieldset>
-            </section> <!-- #search-home -->
+                            <ul id="filter-search-nav">
+                                <li><a class="active" href="">${i18n().all_capitalized}</a></li>
+                                <@lh.allClassGroupNames vClassGroups! />
+                            </ul>
+                        </form>
+                    </fieldset>
+                </section> <!-- #search-home -->
 
-        </section> <!-- #intro -->
+            </section> <!-- #intro -->
 
-        <@widget name="login" />
+            <@widget name="login" />
+        </div>
 
-        <!-- List of research classes: e.g., articles, books, collections, conference papers -->
-        <@lh.researchClasses />
+        <div class="home-cols">
+            <!-- List of research classes: e.g., articles, books, collections, conference papers -->
+            <@lh.researchClasses />
 
-        <!-- List of four randomly selected faculty members -->
-        <@lh.facultyMbrHtml />
+            <!-- List of four randomly selected faculty members -->
+            <@lh.facultyMbrHtml />
 
-        <!-- List of randomly selected academic departments -->
-        <@lh.academicDeptsHtml />
+            <!-- List of randomly selected academic departments -->
+            <@lh.academicDeptsHtml />
+        </div>
 
         <#if geoFocusMapsEnabled >
             <!-- Map display of researchers' areas of geographic focus. Must be enabled in runtime.properties -->

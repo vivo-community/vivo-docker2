@@ -30,4 +30,19 @@
     </nav>
 </footer>
 
+<script>
+    var googleid = "${i18n().google_analytics_id}";
+    if( googleid ) {
+        let script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id="+googleid;
+        script.setAttribute('async', 'async');
+        document.body.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-162893029-1');
+    }
+</script>
+
 <#include "scripts.ftl">
