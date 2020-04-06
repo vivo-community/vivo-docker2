@@ -32,9 +32,12 @@
         <#include "menu.ftl">
 
         <section>
-            <p class="disclaimer">The development of this registry <b>prototype</b> has been spurred on by the COVID-19 
-            epidemic. We are constantly reviewing and updating the registry, and some content may be lost in the 
-            process. We appreciate your patience as we continue building and improving this site. </p>
+            <p class="disclaimer">The library has accelerated development of this registry <b>prototype</b> in 
+            response to the COVID-19 pandemic. As we continue building and improving this site, it is 
+            possible that some data may be lost as updates to the platform are made. We will archive all 
+            data before each site update, so if you notice any information has been lost, please contact 
+            us at experts@library.ucdavis.edu so that we can reference the archived version to restore 
+            your data.</p>
         </section>
 
         <div style="display: flex">

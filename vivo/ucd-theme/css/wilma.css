@@ -1520,6 +1520,15 @@ a.all-vivo-publications {
     vertical-align:text-top;
 }
 /* COAUTHORS ------>  */
+#coauthorship_link_container {
+    display: none !important;
+}
+#mapofscience_link_container {
+    display: none !important;
+}
+.collaboratorship-link-separator {
+    display: none;
+}
 img.co-author {
     border: 2px solid #ebebeb;
 }
