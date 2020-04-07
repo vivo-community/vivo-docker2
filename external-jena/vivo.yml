@@ -1,0 +1,37 @@
+# alias ev-dc='docker-compose -p ev -f ~/vivo-docker2/external-jena/vivo.yml'
+version: '3.5'
+services:
+  solr:
+    build:
+      context: ../solr-vivo
+    volumes:
+      - solr-data:/opt/solr/server/solr/mycores
+
+  vivo:
+    build:
+      context: ../vivo
+    volumes:
+     - ./io:/io
+     - ./config:/usr/local/vivo/home/config
+    ports:
+     - 9090:8080
+   # command: bash -c 'tail -f /dev/null'
+    depends_on:
+      - solr
+
+#  proxy:
+#    build:
+#      context: ../proxy
+#    ports:
+#      - 9090:8080
+#    environment:
+#      - APP_URL=http://localhost:8080
+#      - CAS_URL=https://ssodev.ucdavis.edu/cas
+#      - CAS_AGENT_DOMAIN=ucdavis.edu
+
+volumes:
+  solr-data:
+
+networks:
+  default:
+    name: linked-data

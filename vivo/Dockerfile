@@ -31,4 +31,7 @@ WORKDIR /usr/local/vivo/home/config
 COPY ./dockercompose.runtime.properties runtime.properties
 COPY ./example.applicationSetup.n3 applicationSetup.n3
 
+# COPY custom theme here
+COPY ucd-theme /usr/local/tomcat/webapps/vivo/themes/ucd
+
 RUN export CATALINA_OPTS="-Xms512m -Xmx512m -XX:MaxPermSize=128m"
