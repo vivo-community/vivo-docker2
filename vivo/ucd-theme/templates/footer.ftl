@@ -22,9 +22,10 @@
     <nav role="navigation">
         <ul id="footer-nav" role="list">
             <li role="listitem"><a href="${urls.about}" title="${i18n().menu_about}">${i18n().menu_about}</a></li>
-            <#if urls.contact??>
+            <li role="listitem"><a href="mailto:experts@library.ucdavis.edu" title="${i18n().menu_contactus}">${i18n().menu_contactus}</a></li>
+            <#--  <#if urls.contact??>
                 <li role="listitem"><a href="${urls.contact}" title="${i18n().menu_contactus}">${i18n().menu_contactus}</a></li>
-            </#if>
+            </#if>  -->
             <#--  <li role="listitem"><a href="http://www.vivoweb.org/support" target="blank" title="${i18n().menu_support}">${i18n().menu_support}</a></li>  -->
         </ul>
     </nav>

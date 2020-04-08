@@ -471,8 +471,8 @@ hr.formDivider {
     height: 114px;
 }
 /* BRANDING ------>  */
-h1.vivo-logo {
-    
+.vivo-logo img {
+    margin-left: 10px;
 }
 .tagline {
     flex: 1;
