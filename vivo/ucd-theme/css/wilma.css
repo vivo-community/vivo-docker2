@@ -840,6 +840,10 @@ input.search-home-vivo {
     margin-left: 4px;
     margin-top: 2px;
 }
+#search-home li a[title="http://vivoweb.org/ontology#vitroClassGroupevents"],
+#search-home li a[title="http://vivoweb.org/ontology#vitroClassGrouplocations"] {
+    display: none;
+}
 
 /* SEARCH HOME------>  */
 
@@ -1090,7 +1094,7 @@ footer p.copyright small {
 ul#footer-nav {
     float: right;
     list-style: none;
-    width: 200px;
+    /* width: 200px; */
     height: 20px;
     margin: 0;
     padding: 0;
