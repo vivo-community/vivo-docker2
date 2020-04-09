@@ -31,6 +31,10 @@ WORKDIR /usr/local/vivo/home/config
 COPY ./dockercompose.runtime.properties runtime.properties
 COPY ./example.applicationSetup.n3 applicationSetup.n3
 
+# HACKS
+COPY ./patch/browseByVClass.js /usr/local/tomcat/webapps/vivo/js/menupage/browseByVClass.js
+COPY ./patch/vivo-api-1.10.0-patch.jar /usr/local/tomcat/webapps/vivo/WEB-INF/lib/vivo-api-1.10.0.jar
+
 # COPY custom theme here
 COPY ucd-theme /usr/local/tomcat/webapps/vivo/themes/ucd
 

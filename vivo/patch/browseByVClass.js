@@ -31,13 +31,17 @@ var browseByVClass = {
   bindEventListeners: function() {
       // Listeners for vClass switching
       this.vgraphVClassLinks.click(function() {
-          var uri = $(this).attr('data-uri');
-          browseByVClass.getIndividuals(uri);
+          // JM
+          location.hash = $(this).attr('data-uri');
+          // var uri = $(this).attr('data-uri');
+          // browseByVClass.getIndividuals(uri);
       });
 
       this.browseVClassLinks.click(function() {
-          var uri = $(this).attr('data-uri');
-          browseByVClass.getIndividuals(uri);
+          // JM
+          location.hash = $(this).attr('data-uri');
+          // var uri = $(this).attr('data-uri');
+          // browseByVClass.getIndividuals(uri);
           return false;
       });
 
@@ -51,14 +55,15 @@ var browseByVClass = {
 
       // save the selected vclass in location hash so we can reset the selection
       // if the user navigates with the back button
-      this.browseVClasses.children('li').each( function() {
-         $(this).find('a').click(function () {
-              // the extra space is needed to prevent odd scrolling behavior
-              // location.hash = $(this).attr('data-uri') + ' ';
+      // this.browseVClasses.children('li').each( function() {
+      //    $(this).find('a').click(function () {
+      //         // the extra space is needed to prevent odd scrolling behavior
+      //         // location.hash = $(this).attr('data-uri') + ' ';
+      //    });
+      // });
 
-              // JM
-              location.hash = $(this).attr('data-uri');
-         });
+      window.addEventListener('hashchange', function() {
+        browseByVClass.getIndividuals(location.hash.replace(/^#/, ''));
       });
 
       // Call the pagination listener
