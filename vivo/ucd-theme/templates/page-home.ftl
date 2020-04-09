@@ -31,13 +31,10 @@
 
         <#include "menu.ftl">
 
-        <section>
-            <p class="disclaimer">The library has accelerated development of this registry <b>prototype</b> in 
-            response to the COVID-19 pandemic. As we continue building and improving this site, it is 
-            possible that some data may be lost as updates to the platform are made. We will archive all 
-            data before each site update, so if you notice any information has been lost, please contact 
-            us at experts@library.ucdavis.edu so that we can reference the archived version to restore 
-            your data.</p>
+        <section style="margin-bottom: 15px">
+            <p class="disclaimer">The library has accelerated development of this registry <b>prototype</b> in response to the 
+            COVID-19 pandemic; if you notice any information has been lost, please contact us at 
+            <a href="mailto:experts@library.ucdavis.edu" font-weight="bold">experts@library.ucdavis.edu</a>.</p>
         </section>
 
         <div style="display: flex">
