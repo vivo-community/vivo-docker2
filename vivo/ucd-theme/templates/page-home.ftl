@@ -123,6 +123,8 @@
         // JM
         // preselect people as default search
         $(document).ready(function() {
+            document.querySelector('#search-homepage li a[title="http://vivoweb.org/ontology#vitroClassGrouppublications"]').innerHTML = 'Works';
+
             setTimeout(function() {
                 document.querySelector('#search-homepage li a[title="http://vivoweb.org/ontology#vitroClassGrouppeople"]')
                     .parentElement
