@@ -38,9 +38,7 @@ COPY ./patch/vivo-api-1.10.0-patch.jar /usr/local/tomcat/webapps/vivo/WEB-INF/li
 # COPY custom theme here
 COPY ucd-theme /usr/local/tomcat/webapps/vivo/themes/ucd
 
-# COPY patched java file
-COPY vivo-api-1.10.0-patch.jar /usr/local/tomcat/webapps/vivo/WEB-INF/lib/vivo-api-1.10.0.jar
-
+# Add entrypoint for initialization (umls keywords)
 COPY docker-vivo-entrypoint.sh /usr/local/bin/docker-vivo-entrypoint.sh
 
 RUN export CATALINA_OPTS="-Xms512m -Xmx512m -XX:MaxPermSize=128m"
