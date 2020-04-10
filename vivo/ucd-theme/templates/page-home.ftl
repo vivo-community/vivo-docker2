@@ -119,6 +119,16 @@
         if  ( $('input.search-homepage').css('text-align') == "right" ) {
              $('input.search-homepage').attr("value","${i18n().limit_search} \u2192");
         }
+
+        // JM
+        // preselect people as default search
+        $(document).ready(function() {
+            setTimeout(function() {
+                document.querySelector('#search-homepage li a[title="http://vivoweb.org/ontology#vitroClassGrouppeople"]')
+                    .parentElement
+                    .dispatchEvent(new CustomEvent('click'));
+            }, 100);
+        });
     </script>
     </body>
 </html>

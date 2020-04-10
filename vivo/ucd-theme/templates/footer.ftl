@@ -23,7 +23,7 @@
         <ul id="footer-nav" role="list">
             <li role="listitem"><a href="${urls.about}" title="${i18n().menu_about}">${i18n().menu_about}</a></li>
             <li role="listitem"><a href="mailto:experts@library.ucdavis.edu" title="${i18n().menu_contactus}">${i18n().menu_contactus}</a></li>
-            <li role="listitem"><a href="https://github.com/ucd-library/covid16-research-registery/issues/new/choose" title="Report Issue" target="_blank">Report Issue</a></li>
+            <li role="listitem"><a href="https://github.com/ucd-library/covid19-research-registery/issues/new/choose" title="Report Issue" target="_blank">Report Issue</a></li>
             <#--  <#if urls.contact??>
                 <li role="listitem"><a href="${urls.contact}" title="${i18n().menu_contactus}">${i18n().menu_contactus}</a></li>
             </#if>  -->
