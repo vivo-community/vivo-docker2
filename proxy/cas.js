@@ -35,4 +35,4 @@ function init(app, proxy) {
 
 
 
-module.exports = init;
+module.exports = {init, cas};

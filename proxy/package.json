@@ -12,6 +12,7 @@
     "cas-authentication": "0.0.8",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
-    "http-proxy": "^1.17.0"
+    "http-proxy": "^1.17.0",
+    "node-fetch": "^2.6.0"
   }
 }
