@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>UC Davis Library - Research Registry</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="https://www.library.ucdavis.edu/" target="_blank" rel="noopener">
+          <img src="/images/logo.svg" />
+        </a>
+      </div>
+      <div class="gradient"></div>
+    </header>
+
+    <div>Welcome</div>
+
+    <div>
+      <a class="blue button" 
+        href="/vivo/loginExternalAuth" 
+        title="external authentication name">Log in using UCD CAS
+      </a>
+    </div>
+
+    <div>
+      <form action="/vivo/authenticate" method="POST">
+        <label for="loginName">Username:</label>
+        <input type="text" id="loginName" name="loginName"><br><br>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword"><br><br>
+        <input type="text" id="loginForm" name="loginForm" value="Log in" style="display:none">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

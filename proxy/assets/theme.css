@@ -1,0 +1,35 @@
+body {
+  background: #ffffff url("20200120-food-science-uc-davis.jpg") no-repeat right top;
+}
+
+header {
+  height: 50px; /** IE 11 hack **/
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url('/images/global-header-bg.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.gradient {    
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .7;
+  background-image: url('/images/global-header-bg.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+img {
+  position: absolute;
+  z-index: 5;
+  height: 50px;
+  top: 25px;
+  left: 25px;    
+}
