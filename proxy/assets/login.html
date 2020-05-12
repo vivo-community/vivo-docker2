@@ -2,35 +2,40 @@
   <head>
     <title>UC Davis Library - Research Registry</title>
     <link rel="stylesheet" type="text/css" href="theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   </head>
   <body>
     <header>
       <div class="logo">
         <a href="https://www.library.ucdavis.edu/" target="_blank" rel="noopener">
-          <img src="/images/logo.svg" />
+          <img src="images/logo.svg" alt="Home" />
         </a>
+      </div>  
+      
+      <div class="page-title">
+        <strong>Research Registry</strong> <em>Prototype</em>
       </div>
-      <div class="gradient"></div>
     </header>
 
-    <div>Welcome</div>
+    <main>
+      <div class="login-box-wrapper">
+        <div class="login-box">
+          <p>
+            The <strong>UC Davis Research Registry</strong> is a research-focused discovery 
+            tool that enables collaboration among scholars of all disciplines 
+            specifically created to help with the COVID-19 pandemic.
+          </p>
 
-    <div>
-      <a class="blue button" 
-        href="/vivo/loginExternalAuth" 
-        title="external authentication name">Log in using UCD CAS
-      </a>
-    </div>
+          <p>
+            To access the registry, log in using your UC Davis credentials.
+          </p>
 
-    <div>
-      <form action="/vivo/authenticate" method="POST">
-        <label for="loginName">Username:</label>
-        <input type="text" id="loginName" name="loginName"><br><br>
-        <label for="loginPassword">Password:</label>
-        <input type="password" id="loginPassword" name="loginPassword"><br><br>
-        <input type="text" id="loginForm" name="loginForm" value="Log in" style="display:none">
-        <input type="submit" value="Submit">
-      </form>
-    </div>
+          <a class="blue button" 
+            href="/vivo/loginExternalAuth" 
+            title="external authentication name">Log in with UC Davis CAS
+          </a>
+        </div>
+      </div>
+    </main>    
   </body>
 </html>
