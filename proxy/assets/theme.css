@@ -8,8 +8,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  /*font-family: "proxima-nova","Lucida Grande","Lucida Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova","Lucida Grande","Lucida Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.0rem;
   line-height: calc(14px * 1.625);
   color: black;
@@ -45,8 +44,7 @@ header > .logo {
   height: 60px;
   background-color: white;
   font-size: 22px;
-
-  border-bottom: 2px solid #dce4e3;
+  box-shadow: 0 2px 1px rgba(0,40,85,0.15);
 }
 
 .page-title > strong {
