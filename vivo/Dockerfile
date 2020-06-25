@@ -23,8 +23,8 @@ RUN unzip VIVO.zip -d VIVO
 RUN rm VIVO.zip
 
 WORKDIR /usr/local/VIVO/
-COPY ./example-settings.xml example-settings.xml
-RUN mvn install -s example-settings.xml
+COPY ./settings.xml settings.xml
+RUN mvn install -s settings.xml
 
 # clean up
 RUN rm -r /usr/local/tomcat/webapps/docs
@@ -36,10 +36,8 @@ COPY ./log4j.properties /usr/local/tomcat/webapps/VIVO/WEB-INF/classes
 
 WORKDIR /usr/local/VIVO/home/config
 
-COPY ./dockercompose.runtime.properties runtime.properties
-COPY ./example.applicationSetup.n3 applicationSetup.n3
-#COPY ./dockercompose.runtime.properties /usr/local/vivo/home/config/runtime.properties
-#COPY ./example.applicationSetup.n3 /usr/local/vivo/home/config/applicationSetup.n3
+COPY ./runtime.properties runtime.properties
+COPY ./applicationSetup.n3 applicationSetup.n3
 
 RUN chmod ugo+w -R /usr/local/tomcat/temp
 RUN chmod ugo+w -R /usr/local/VIVO/home
