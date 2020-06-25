@@ -29,10 +29,7 @@ The example [docker-compose.yml](docker-compose.yml) is a typical installation f
 docker-compose up -d
 ```
  Will start this project.  Navigating to http://localhost:8080/vivo will then start this simple instance.
-
- If you get an error indicating that the database was not found, this could be due to a bug where the vivo instance is not waiting on the mariadb instance to initialize.  IF you have this error, try `docker-compose down; docker-compose up -d`.
-
-
+ 
 ## VIVO Development
 
 You can use these same containers to develop a local VIVO installation.  In this
