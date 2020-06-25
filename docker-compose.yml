@@ -27,7 +27,9 @@ services:
     build:
       context: ./vivo
     volumes:
-      - ./example-config:/usr/local/vivo/home/config
+      - ./vivo/conf/applicationSetup.n3:/usr/local/VIVO/home/config/applicationSetup.n3
+      - ./vivo/conf/log4j.properties:/usr/local/tomcat/webapps/VIVO/WEB-INF/classes
+      - ./vivo/conf/runtime.properties:/usr/local/VIVO/home/config/runtime.properties
     ports:
       - 8080:8080
 
