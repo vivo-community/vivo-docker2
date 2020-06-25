@@ -26,6 +26,9 @@ services:
   vivo:
     build:
       context: ./vivo
+    depends_on:
+      - solr
+      - mariadb
     volumes:
       - ./example-config:/usr/local/vivo/home/config
     ports:
