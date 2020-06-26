@@ -23,8 +23,8 @@ RUN unzip VIVO.zip -d VIVO
 RUN rm VIVO.zip
 
 WORKDIR /usr/local/VIVO/
-COPY ./settings.xml settings.xml
-RUN mvn install -s settings.xml
+COPY ./example-settings.xml example-settings.xml
+RUN mvn install -s example-settings.xml
 
 # clean up
 RUN rm -r /usr/local/tomcat/webapps/docs
