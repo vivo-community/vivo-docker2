@@ -27,9 +27,9 @@ services:
     build:
       context: ./vivo
     volumes:
-      - ./vivo/applicationSetup.n3:/usr/local/VIVO/home/config/applicationSetup.n3
-      - ./vivo/log4j.properties:/usr/local/tomcat/webapps/VIVO/WEB-INF/classes
-      - ./vivo/runtime.properties:/usr/local/VIVO/home/config/runtime.properties
+      - ./vivo/example.applicationSetup.n3:/usr/local/VIVO/home/config/applicationSetup.n3
+      - ./vivo/dockercompose.runtime.properties:/usr/local/VIVO/home/config/runtime.properties
+      - ./vivo/log4j.properties:/usr/local/tomcat/webapps/vivo/WEB-INF/classes/log4j.properties
     ports:
       - 8080:8080
 
