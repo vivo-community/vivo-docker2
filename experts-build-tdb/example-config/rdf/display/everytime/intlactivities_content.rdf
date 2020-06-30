@@ -1,0 +1,17 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="java:"
+    xmlns:j.1="http://vitro.mannlib.cornell.edu/ontologies/display/1.1#" > 
+  <rdf:Description rdf:about="http://vitro.mannlib.cornell.edu/ns/default#intlactivities_content">
+    <rdf:type rdf:resource="java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.FixedHTMLDataGetter"/>
+    <j.1:saveToVar>content</j.1:saveToVar>
+    <j.1:htmlValue>&lt;h2&gt;Data on International Activities for CU Boulder Faculty&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Are you interested in what global connections the faculty at CU Boulder have?&lt;/strong&gt; &lt;a href="/internationalActivities"&gt;Click here&lt;/a&gt; for the list of countries and associated faculty members.&lt;/p&gt;
+ 
+&lt;p&gt;These data show where CU Boulder faculty have taught students, collaborated with researchers, or conducted other scholarly activities around the world in recent years. Only the country is reported, not details about the types of activities.&lt;/p&gt;
+ 
+&lt;p&gt;&lt;strong&gt;For research interests on a particular country,&lt;/strong&gt; use the CU Experts search tool at the top of the page to locate faculty conducting research on that country.&lt;/p&gt;</j.1:htmlValue>
+  </rdf:Description>
+</rdf:RDF>
+

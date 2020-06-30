@@ -1,0 +1,34 @@
+version: '3'
+services:
+  solr:
+    build:
+      context: ./solr
+    ports:
+      - 8983:8983
+    volumes:
+      - solr-data:/opt/solr/server/solr/ckan/data
+    command: solr-create -c vivocore -d /opt/vivocore
+    networks:
+       vivonet:
+
+  vivo:
+    build:
+      context: ./vivo
+    volumes:
+      - ./home:/usr/local/vivo/home:z
+    ports:
+      - 8080:8080
+    networks:
+       vivonet:
+
+
+volumes:
+  solr-data:
+  config:
+
+networks:
+  vivonet:
+    ipam:
+      driver: default
+      config:
+        - subnet: "10.150.0.0/16"

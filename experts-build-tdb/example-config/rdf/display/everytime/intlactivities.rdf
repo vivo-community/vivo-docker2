@@ -1,0 +1,15 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://vitro.mannlib.cornell.edu/ontologies/display/1.1#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://vitro.mannlib.cornell.edu/ns/default#internationalActivities">
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ontologies/display/1.1#Page"/>
+    <j.0:hasDataGetter rdf:resource="http://vitro.mannlib.cornell.edu/ns/default#internationalActivitiesDataGetter"/>
+    <j.0:title>International Activities (in recent years)</j.0:title>
+    <j.0:urlMapping>/internationalActivities</j.0:urlMapping>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vitro.mannlib.cornell.edu/ontologies/display/1.1#Page">
+    <rdfs:label>Page</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
+

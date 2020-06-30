@@ -1,0 +1,53 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix datagetter: <java:edu/cornell/mannlib/vitro/webapp/utils/datagetter/> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix role:  <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> . 
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+@base <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration> .
+
+
+# warning: don't use blank nodes; the display model doesn't currently support them.
+
+### roles using the teacher role property ###
+
+local:personHasTeacherRoleContext a :ConfigContext ;
+    :hasConfiguration local:personHasTeacherRoleConfig ;
+    :configContextFor <http://purl.obolibrary.org/obo/RO_0000053> ;
+    :qualifiedByDomain  <http://xmlns.com/foaf/0.1/Person>  ;
+    :qualifiedBy      <http://vivoweb.org/ontology/core#TeacherRole> .
+
+local:personHasTeacherRoleConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-personHasTeacherRole.xml"^^xsd:string ;
+    rdfs:label "personHasTeacherRole"@en-US;
+    :displayName "courses taught" ;
+    vitro:displayRankAnnot 20;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    vitro:stubObjectPropertyAnnot "true"^^xsd:boolean ;
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddTeacherRoleToPersonGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupteaching> .
+
+
+local:courseHasTeacherRoleContext a :ConfigContext ;
+    :hasConfiguration local:courseHasTeacherRoleConfig ;
+    :configContextFor <http://purl.obolibrary.org/obo/BFO_0000055> ;
+    :qualifiedByDomain      <http://vivoweb.org/ontology/core#Course> ;
+    :qualifiedBy      vivo:TeacherRole .
+
+local:courseHasTeacherRoleConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-courseHasTeacherRole.xml"^^xsd:string ;
+    rdfs:label "courseHasTeacherRole"@en-US;
+    :displayName "instructor(s)" ;
+    vitro:displayRankAnnot 17;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    vitro:customEntryFormAnnot "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.ProjectHasParticipantGenerator"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
