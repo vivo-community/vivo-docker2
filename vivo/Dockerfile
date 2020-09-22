@@ -9,22 +9,30 @@ RUN apt-get install -y maven git
 
 WORKDIR /usr/local/
 
-#RUN git clone https://github.com/vivo-project/Vitro.git Vitro -b rel-1.11.0-RC
-#RUN git clone https://github.com/vivo-project/VIVO.git VIVO -b rel-1.11.0-RC
+RUN git clone https://github.com/vivo-project/Vitro.git Vitro 
+RUN git clone https://github.com/vivo-project/VIVO.git VIVO -b sprint-i18n
+RUN git clone https://github.com/vivo-project/VIVO-languages.git VIVO-languages 
+RUN git clone https://github.com/vivo-project/Vitro-languages.git Vitro-languages 
 
-ENV VITRO_VERSION 1.11.0
-RUN wget -O Vitro.zip https://github.com/vivo-project/Vitro/releases/download/vitro-${VITRO_VERSION}/vitro-${VITRO_VERSION}.zip 
-RUN unzip Vitro.zip -d Vitro
-RUN rm Vitro.zip
+ENV BRANCH_NAME docker
 
-ENV VIVO_VERSION 1.11.0
-RUN wget -O VIVO.zip https://github.com/vivo-project/VIVO/releases/download/vivo-${VIVO_VERSION}/VIVO-${VIVO_VERSION}.zip
-RUN unzip VIVO.zip -d VIVO
-RUN rm VIVO.zip
+WORKDIR /usr/local/Vitro/
+RUN git fetch origin pull/169/head:${BRANCH_NAME}
+RUN git checkout ${BRANCH_NAME}
+
+WORKDIR /usr/local/VIVO-languages/
+RUN git fetch origin pull/57/head:${BRANCH_NAME}
+RUN git checkout ${BRANCH_NAME}
+RUN mvn clean install
+
+WORKDIR /usr/local/Vitro-languages/
+RUN git fetch origin pull/24/head:${BRANCH_NAME}
+RUN git checkout ${BRANCH_NAME}
+RUN mvn clean install
 
 WORKDIR /usr/local/VIVO/
 COPY ./example-settings.xml example-settings.xml
-RUN mvn install -s example-settings.xml
+RUN mvn clean install -s example-settings.xml
 
 # clean up
 RUN rm -r /usr/local/tomcat/webapps/docs

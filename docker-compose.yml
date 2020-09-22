@@ -1,19 +1,5 @@
 version: '3'
 services:
-  mariadb:
-    environment:
-      - MYSQL_USER=vitrodbUsername
-      - MYSQL_PASSWORD=vitrodbPassword
-      - MYSQL_ROOT_PASSWORD=rootPassword
-      - MYSQL_ROOT_HOST=%
-      - TZ=America/Chicago
-    build:
-      context: ./mariadb
-    volumes:
-      - maria-data:/var/lib/mysql
-    ports:
-      - 3306:3306
-
   solr:
     build:
       context: ./solr
@@ -34,4 +20,3 @@ services:
 
 volumes:
   solr-data:
-  maria-data:
