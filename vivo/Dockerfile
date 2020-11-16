@@ -43,3 +43,7 @@ COPY ./example.applicationSetup.n3 applicationSetup.n3
 
 RUN chmod ugo+w -R /usr/local/tomcat/temp
 RUN chmod ugo+w -R /usr/local/VIVO/home
+RUN ln -sf /dev/stdout /usr/local/tomcat/logs/vivo.all.log
+
+ADD start.sh /
+RUN chmod +x /start.sh
