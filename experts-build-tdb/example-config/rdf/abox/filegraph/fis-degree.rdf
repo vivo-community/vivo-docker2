@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xmlns:j.0="http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.1="http://purl.org/ontology/bibo/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.2="http://purl.org/dc/terms/"
+    xmlns:j.3="http://vivoweb.org/ontology/core#"
+    xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree190">
+    <rdfs:label xml:lang="en-US">Dr. habil. Habilitation</rdfs:label>
+    <j.3:abbreviation>Dr. habil.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree119">
+    <rdfs:label xml:lang="en-US">B.S.M.E. Bachlor of Science Mechanical Engineering</rdfs:label>
+    <j.3:abbreviation>B.S.M.E.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree120">
+    <rdfs:label xml:lang="en-US">D.M.A. Doctor of Musical Arts</rdfs:label>
+    <j.3:abbreviation>D.M.A.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree121">
+    <rdfs:label xml:lang="en-US">D.Mus. Doctor of Music</rdfs:label>
+    <j.3:abbreviation>D.Mus.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree122">
+    <rdfs:label xml:lang="en-US">M.Arch. Master of Architecture</rdfs:label>
+    <j.3:abbreviation>M.Arch.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree123">
+    <rdfs:label xml:lang="en-US">M.L.A. Master of Liberal Arts</rdfs:label>
+    <j.3:abbreviation>M.L.A.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="https://experts.colorado.edu/ontology/vivo-fis/degree/academicDegree124">
+    <rdfs:label xml:lang="en-US">M.P.A. Master of Public Administration</rdfs:label>
+    <j.3:abbreviation>M.P.A.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="http://vivoweb.org/ontology/degree/academicDegree119">
+    <rdfs:label xml:lang="en-US">Psy.D. Doctor of Psychology</rdfs:label>
+    <j.3:abbreviation>Psy.D.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree181">
+    <rdfs:label xml:lang="en-US">M.J. Master of Journalism</rdfs:label>
+    <j.3:abbreviation>M.J.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree182">
+    <rdfs:label xml:lang="en-US">B.Econ. Bachelor of Economics</rdfs:label>
+    <j.3:abbreviation>B.Econ</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree183">
+    <rdfs:label xml:lang="en-US">B.M.E. Bachelor of Music Education</rdfs:label>
+    <j.3:abbreviation>B.M.E.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree184">
+    <rdfs:label xml:lang="en-US">M.L.A. Master of Landscape Architecture</rdfs:label>
+    <j.3:abbreviation>M.L.A.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://experts.colorado.edu/ontology/degree/academicDegree200">
+    <rdfs:label xml:lang="en-US">Sp. L.I.S. Specialist in Library and Information Science</rdfs:label>
+    <j.3:abbreviation>Sp. L.I.S.</j.3:abbreviation>
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+  </rdf:Description>
+</rdf:RDF>

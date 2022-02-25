@@ -1,0 +1,17 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="java:"
+    xmlns:j.1="http://vitro.mannlib.cornell.edu/ontologies/display/1.1#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://vitro.mannlib.cornell.edu/ns/default#internationalActivitiesDataGetter">
+    <j.1:forClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouplocations"/>
+    <rdf:type rdf:resource="java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.InternalClassesDataGetter"/>
+    <j.1:getIndividualsForClass rdf:resource="http://vivoweb.org/ontology/core#Country"/>
+    <j.1:getIndividualsForClass rdf:resource="http://aims.fao.org/aos/geopolitical.owl#geographical_region"/>
+    <j.1:restrictResultsByInternalClass>false</j.1:restrictResultsByInternalClass>
+  </rdf:Description>
+  <rdf:Description rdf:about="java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.InternalClassesDataGetter">
+    <rdfs:label>Class Group Page - Institutional Internal Class</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
+

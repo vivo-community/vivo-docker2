@@ -1,0 +1,23 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="java:"
+    xmlns:j.1="http://vitro.mannlib.cornell.edu/ontologies/display/1.1#" > 
+  <rdf:Description rdf:about="http://vitro.mannlib.cornell.edu/ns/default#industryCollabDataGetter">
+    <rdf:type rdf:resource="java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.FixedHTMLDataGetter"/>
+    <j.1:saveToVar>content</j.1:saveToVar>
+    <j.1:htmlValue>&lt;h2&gt;For Industry Collaboration&lt;/h2&gt;
+           		
+           		&lt;p&gt;&lt;a href="http://www.colorado.edu/industry/"&gt;The Office of Industry Collaboration&lt;/a&gt; promotes and supports synergistic opportunities
+                for engagement between CU Boulder and industry and business. Strengthening these connections
+                provides benefits to partners, students, and local, state, and national economies. 
+
+                &lt;p&gt;The Industry office provides an identified point of contact to connect business to the
+                        services, expertise, and capabilities available at CU Boulder in support of operational
+                        goals. Following the connection and determination of mutual interest, the Industry office
+                        remains engaged to proficiently propel the project forward through contracting,
+                        implementation, delivery, and close-out. In addition, the Industry office supports
+                        CU Researchers who have made connections with industry partners and are ready to
+                        progress.  Industry may contact the departments directly or through the Industry office for a broader dissemination of information and identification of potential connections.&lt;/p&gt;</j.1:htmlValue>
+  </rdf:Description>
+</rdf:RDF>
+

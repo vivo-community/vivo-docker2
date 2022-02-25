@@ -1,1 +1,9 @@
-*~
+runtime-tdb/home/rdf
+runtime-tdb/solr/vivocore
+runtime-tdb/home/tdbContentModels
+*/home
+*/tdbContentModels
+*.war
+
+
+

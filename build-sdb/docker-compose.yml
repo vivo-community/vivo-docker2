@@ -1,0 +1,37 @@
+version: '3'
+services:
+  mariadb:
+    environment:
+      - MYSQL_USER=vitrodbUsername
+      - MYSQL_PASSWORD=vitrodbPassword
+      - MYSQL_ROOT_PASSWORD=rootPassword
+      - MYSQL_ROOT_HOST=%
+      - TZ=America/Chicago
+    build:
+      context: ./mariadb
+    volumes:
+      - maria-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  solr:
+    build:
+      context: ./solr
+    ports:
+      - 8983:8983
+    volumes:
+      - solr-data:/opt/solr/server/solr/ckan/data
+    command: solr-create -c vivocore -d /opt/vivocore
+
+  vivo:
+    build:
+      context: ./vivo
+    volumes:
+      - ./example-config:/usr/local/vivo/home/config
+    ports:
+      - 8080:8080
+
+
+volumes:
+  solr-data:
+  maria-data:
