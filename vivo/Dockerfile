@@ -17,7 +17,6 @@ WORKDIR /usr/local/VIVO/
 
 ## insert customizations to image before maven install
 COPY --chown=root:staff ./configs/settings.xml /usr/local/VIVO/settings.xml
-COPY --chown=root:staff ./configs/initialSiteConfig.rdf /usr/local/VIVO/installer/home/src/main/resources/rdf/applicationMetadata/firsttime/
 
 WORKDIR /usr/local/Vitro
 RUN mvn install
