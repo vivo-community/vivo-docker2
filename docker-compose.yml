@@ -4,8 +4,8 @@ services:
   solr:
     container_name: solr
     image: vivo-docker2/solr
-    # build:
-    #   context: ./solr
+    build:
+      context: ./solr
     volumes:
       - solr_data:/var/solr
     # ports:
@@ -15,16 +15,14 @@ services:
   vivo:
     container_name: vivo
     image: vivo-docker2/vivo
-    # build:
-    #   context: ./vivo
+    build:
+      context: ./vivo
     depends_on:
       - solr
     volumes:
       - ./tdbModels:/usr/local/VIVO/home/tdbModels
       - ./tdbContentModels:/tdbContentModels
       - ./current_turtle/userdata.ttl:/usr/local/VIVO/home/rdf/abox/filegraph/userdata.ttl
-      - ./vivo/uncw_theme:/usr/local/tomcat/webapps/vivo/themes/uncw_theme
-      - ./uploads:/usr/local/VIVO/home/uploads/
     ports:
       - 8080:8080
     restart: always

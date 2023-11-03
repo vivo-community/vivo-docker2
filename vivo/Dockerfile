@@ -8,7 +8,7 @@ ENV CATALINA_OPTS="-Xms512m -Xmx4g -XX:MaxPermSize=512m"
 
 WORKDIR /usr/local/
 
-ARG GIT_BRANCH="main"
+ARG GIT_BRANCH="rel-1.14-maint"
 
 RUN git clone https://github.com/vivo-project/Vitro.git Vitro -b ${GIT_BRANCH} && \
 	git clone https://github.com/vivo-project/VIVO.git VIVO -b ${GIT_BRANCH}
